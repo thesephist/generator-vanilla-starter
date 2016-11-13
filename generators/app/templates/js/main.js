@@ -1,4 +1,4 @@
-var <%= name %> = {
+var <%= bigshortname %> = {
 
     // elements
     el: {
@@ -8,7 +8,7 @@ var <%= name %> = {
     // events
     ev: {
         // of the form
-        // eventName elQuery: functionIn<%= name %>.f
+        // eventName elQuery: functionIn<%= bigshortname %>.f
     },
 
     // functions
@@ -23,15 +23,15 @@ var <%= name %> = {
 
 };
 
-<%= name %>.init = function() {
+<%= bigshortname %>.init = function() {
 
     // add event listeners
-    Object.keys(<%= name %>.ev).forEach(function(identifier) {
+    Object.keys(<%= bigshortname %>.ev).forEach(function(identifier) {
         var eventName = identifier.split(' ')[0],
             selector = identifier.split(' ').splice(1).join(' '),
-            fn = <%= name %>.f[<%= name %>.ev[identifier]];
+            fn = <%= bigshortname %>.f[<%= bigshortname %>.ev[identifier]];
 
-        <%= name %>Utils.eventAdder(selector, eventName, fn);
+        <%= bigshortname %>Utils.eventAdder(selector, eventName, fn);
     });
 
     // serviceWorker check
@@ -43,8 +43,8 @@ var <%= name %> = {
         });
     }
 
-    console.info('<%= name %> initialized');
+    console.info('<%= bigshortname %> initialized');
 
 };
 
-<%= name %>.init();
+<%= bigshortname %>.init();

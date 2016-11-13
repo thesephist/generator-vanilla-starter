@@ -1,7 +1,7 @@
 var $ = document.querySelector.bind(document),
     $$ = document.querySelectorAll.bind(document);
 
-var <%= name %>Utils = {
+var <%= bigshortname %>Utils = {
 
     eventAdder: function(selector, eventName, callback) {
         var targets = $$(selector) || [],

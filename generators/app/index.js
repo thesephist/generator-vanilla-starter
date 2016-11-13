@@ -19,6 +19,12 @@ module.exports = yeoman.Base.extend({
       },
       {
         type: 'input',
+        name: 'bigshortname',
+        message: 'CamelCase name:',
+        default: 'Starter'
+      },
+      {
+        type: 'input',
         name: 'name',
         message: 'User-facing project name:',
         default: 'Starter'
@@ -61,10 +67,9 @@ module.exports = yeoman.Base.extend({
       }
     ]
 
-    return this.prompt(prompts).then(function (props) {
-      // To access props later use this.props.someAnswer;
+    return this.prompt(prompts).then(props => {
       this.props = props;
-    }.bind(this));
+    });
   },
 
   writing: function() {

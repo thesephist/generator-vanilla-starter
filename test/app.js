@@ -12,7 +12,24 @@ describe('generator-vanilla-starter:app', function () {
 
   it('creates files', function () {
     assert.file([
-      'dummyfile.txt'
+      'package.json',
+      'assets/logo.png',
+      'css/_app.scss',
+      'css/_reset.scss',
+      'css/_vars.scss',
+      'css/main.css',
+      'css/main.scss',
+      'gulpfile.js',
+      'humans.txt',
+      'index.html',
+      'js/main.js',
+      'js/main.min.js',
+      'js/utils.js',
+      'LICENSE',
+      'manifest.json',
+      'README.md',
+      'robots.txt',
+      'sw.js'
     ]);
   });
 });
