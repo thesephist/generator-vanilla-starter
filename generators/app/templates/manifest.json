@@ -1,0 +1,21 @@
+{
+  "name": "<%= name %>",
+  "short_name": "<%= shortname %>",
+  "start_url": "https://<%= domain %>",
+
+  "display": "standalone",
+  "background_color": "<%= color %>",
+  "theme_color": "<%= color %>",
+  "description": "<%= description %>",
+
+  "icons": [
+    {
+      "src": "assets/icons/size.png",
+      "sizes": "sizexsize",
+      "type": "image/png"
+    }
+  ],
+
+  "serviceWorker": "sw.js"
+
+}

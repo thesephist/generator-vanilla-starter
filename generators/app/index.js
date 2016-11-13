@@ -5,17 +5,61 @@ var yosay = require('yosay');
 
 module.exports = yeoman.Base.extend({
   prompting: function () {
-    // Have Yeoman greet the user.
+
     this.log(yosay(
-      'Welcome to the wonderful ' + chalk.red('generator-vanilla-starter') + ' generator!'
+      'Welcome to ' + chalk.blue('generator-vanilla-starter') + '!'
     ));
 
-    var prompts = [{
-      type: 'confirm',
-      name: 'someAnswer',
-      message: 'Would you like to enable this option?',
-      default: true
-    }];
+    var prompts = [
+      {
+        type: 'input',
+        name: 'shortname',
+        message: 'Internal project name:',
+        default: 'starter'
+      },
+      {
+        type: 'input',
+        name: 'name',
+        message: 'User-facing project name:',
+        default: 'Starter'
+      },
+      {
+        type: 'input',
+        name: 'color',
+        message: 'Project theme color:',
+        default: '#ffffff'
+      },
+      {
+        type: 'input',
+        name: 'author',
+        message: 'Author:',
+        default: 'somebody'
+      },
+      {
+        type: 'input',
+        name: 'username',
+        message: 'Social username:',
+        default: 'username'
+      },
+      {
+        type: 'input',
+        name: 'email',
+        message: 'Your email:',
+        default: 'user@example.com'
+      },
+      {
+        type: 'input',
+        name: 'domain',
+        message: 'Project domain:',
+        default: 'starter.com'
+      },
+      {
+        type: 'input',
+        name: 'description',
+        message: 'Project description:',
+        default: 'A lightweight web application boilerplate'
+      }
+    ]
 
     return this.prompt(prompts).then(function (props) {
       // To access props later use this.props.someAnswer;

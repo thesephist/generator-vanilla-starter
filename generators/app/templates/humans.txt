@@ -1,0 +1,6 @@
+Hand-crafted with love by <%= author %>
+
+* * *
+
+@<%= username %>
+<%= email %>
