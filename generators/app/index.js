@@ -67,10 +67,11 @@ module.exports = yeoman.Base.extend({
     }.bind(this));
   },
 
-  writing: function () {
-    this.fs.copy(
-      this.templatePath('dummyfile.txt'),
-      this.destinationPath('dummyfile.txt')
+  writing: function() {
+    this.fs.copyTpl(
+      `${this.templatePath()}/**/*`,
+      this.destinationPath(),
+      this.props
     );
   },
 
