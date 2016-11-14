@@ -1,6 +1,6 @@
 // <%= name %> ServiceWorker
 
-const cacheName = '<%= name %>-appcache-v1';
+const cacheName = '<%= shortname %>-appcache-v1';
 
 // caching static assets
 self.addEventListener('install', function(event) {
